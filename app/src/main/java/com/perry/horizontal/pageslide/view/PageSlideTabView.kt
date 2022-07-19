@@ -176,18 +176,18 @@ class PageSlideTabView @JvmOverloads constructor(
         }
     }
 
-    private fun attachToViewPager2(pager: ViewPager2?) {
-        if (pager == null) return
-        val adapter = pager.adapter
-            ?: throw IllegalAccessException("you did not set ViewPager2's adapter")
-
-        tabsContainer.removeAllViews()
-
-        val tabNum = adapter.itemCount
-        for (i in 0 until tabNum) {
-            tabsContainer.addView(addSingleTextTab("", i))
-        }
-    }
+//    private fun attachToViewPager2(pager: ViewPager2?) {
+//        if (pager == null) return
+//        val adapter = pager.adapter
+//            ?: throw IllegalAccessException("you did not set ViewPager2's adapter")
+//
+//        tabsContainer.removeAllViews()
+//
+//        val tabNum = adapter.itemCount
+//        for (i in 0 until tabNum) {
+//            tabsContainer.addView(addSingleTextTab("", i))
+//        }
+//    }
 
     private fun addSingleTextTab(tabText: String?, index: Int): TextView? {
         if (tabText == null) return null
