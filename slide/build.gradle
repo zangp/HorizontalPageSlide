@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
+    id 'signing'
 }
 
 android {
@@ -12,7 +14,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -35,4 +36,79 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    archiveClassifier.set("sources")
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    archiveClassifier.set("javadoc")
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = "io.github.zangp"
+            artifactId = "slide-tab"
+            version = "0.5.0"
+            from components.java
+
+            artifact sourcesJar
+            artifact javadocJar
+
+            pom {
+                // 构件名称
+                // 区别于artifactId，可以理解为artifactName
+                name = 'PageSlideTab'
+                // 构件描述
+                description = 'PageSlideTab library'
+                // 构件主页
+                url = 'https://github.com/zangp/HorizontalPageSlide'
+                // 许可证名称和地址
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                // 开发者信息
+                developers {
+                    developer {
+                        name = 'perry'
+                        email = 'zangp_hq@163.com'
+                    }
+                }
+                // 版本控制仓库地址，git@github.com:zangp/HorizontalPageSlide.git
+                scm {
+                    url = 'https://github.com/zangp/HorizontalPageSlide'
+                    connection = 'scm:git:git://github.com/zangp/HorizontalPageSlide.git'
+                    developerConnection = 'scm:git:ssh://git@github.com:zangp/HorizontalPageSlide.git'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username
+                password
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+
+javadoc {
+    // <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    // 防止本地打开中文乱码
+    options.addStringOption("charset", "UTF-8")
 }
