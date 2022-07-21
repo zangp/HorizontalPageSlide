@@ -1,4 +1,4 @@
-package com.perry.horizontal.pageslide.utils
+package com.perry.horizontal.slide.utils
 
 import android.content.Context
 import kotlin.math.roundToInt

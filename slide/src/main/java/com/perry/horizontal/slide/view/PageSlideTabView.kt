@@ -1,4 +1,4 @@
-package com.perry.horizontal.pageslide.view
+package com.perry.horizontal.slide.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -12,9 +12,8 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
-import com.perry.horizontal.pageslide.R
-import com.perry.horizontal.pageslide.utils.dp2px
+import com.perry.horizontal.slide.R
+import com.perry.horizontal.slide.utils.dp2px
 
 /**
  * @CreateDate: 2022/7/9

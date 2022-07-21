@@ -1,9 +1,9 @@
-package com.perry.horizontal.pageslide.adapter
+package com.perry.horizontal.slide.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.perry.horizontal.pageslide.impl.PageAdapterImpl
+import com.perry.horizontal.slide.impl.PageAdapterImpl
 
 /**
  * @CreateDate: 2022/7/16

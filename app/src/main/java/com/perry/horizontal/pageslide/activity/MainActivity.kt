@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.perry.horizontal.pageslide.adapter.ViewPagerBaseAdapter
 import com.perry.horizontal.pageslide.databinding.ActivityMainBinding
 import com.perry.horizontal.pageslide.databinding.FragmentViewABinding
+import com.perry.horizontal.slide.adapter.ViewPagerBaseAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

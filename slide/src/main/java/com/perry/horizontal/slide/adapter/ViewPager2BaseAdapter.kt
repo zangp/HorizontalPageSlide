@@ -1,4 +1,4 @@
-package com.perry.horizontal.pageslide.adapter
+package com.perry.horizontal.slide.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 

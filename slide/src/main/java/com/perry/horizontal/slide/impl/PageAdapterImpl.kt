@@ -1,4 +1,4 @@
-package com.perry.horizontal.pageslide.impl
+package com.perry.horizontal.slide.impl
 
 /**
  * @CreateDate: 2022/7/16

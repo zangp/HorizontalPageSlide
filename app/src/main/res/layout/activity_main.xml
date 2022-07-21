@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <com.perry.horizontal.pageslide.view.PageSlideTabView
+    <com.perry.horizontal.slide.view.PageSlideTabView
         android:id="@+id/pageSlideTabView"
         android:layout_width="match_parent"
         android:layout_height="50dp"

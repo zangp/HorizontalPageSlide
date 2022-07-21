@@ -1,8 +1,8 @@
-package com.perry.horizontal.pageslide.adapter
+package com.perry.horizontal.slide.adapter
 
 import android.view.View
 import androidx.viewpager.widget.PagerAdapter
-import com.perry.horizontal.pageslide.impl.PageAdapterImpl
+import com.perry.horizontal.slide.impl.PageAdapterImpl
 
 /**
  * @CreateDate: 2022/7/16
@@ -12,7 +12,8 @@ import com.perry.horizontal.pageslide.impl.PageAdapterImpl
  * @Email : zangp_hq@163.com
  * @Version : 1.0
  */
-abstract class ViewPagerBaseAdapter<T>(private var data: MutableList<T>) : PagerAdapter(), PageAdapterImpl {
+abstract class ViewPagerBaseAdapter<T>(private var data: MutableList<T>) : PagerAdapter(),
+    PageAdapterImpl {
     override fun getCount(): Int {
         return if (data.isEmpty()) 0 else data.size
     }
