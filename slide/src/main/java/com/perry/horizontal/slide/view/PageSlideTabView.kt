@@ -133,10 +133,6 @@ class PageSlideTabView @JvmOverloads constructor(
             R.styleable.PageSlideTabView_tabExpand,
             true
         )
-//        tabLeftPadding = a.getDimensionPixelSize(
-//            R.styleable.PageSlideTabView_tabLeftPadding,
-//            tabLeftPadding
-//        )
 //        tabRightPadding = a.getDimensionPixelSize(
 //            R.styleable.PageSlideTabView_tabRightPadding,
 //            tabRightPadding
@@ -145,6 +141,9 @@ class PageSlideTabView @JvmOverloads constructor(
             R.styleable.PageSlideTabView_tabSpace,
             tabSpace
         )
+
+        Log.w("zp_test", "tabSpace = $tabSpace")
+
         tabTextColor = a.getColor(
             R.styleable.TabLayout_tabTextColor,
             tabTextColor

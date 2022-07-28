@@ -14,6 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:indicatorColor="@color/teal_700"
         app:tabExpand="false"
+        app:tabSpace="20dp"
         app:indicatorHeight="6dp"/>
 
     <androidx.viewpager2.widget.ViewPager2
